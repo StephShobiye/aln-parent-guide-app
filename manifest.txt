@@ -1,0 +1,37 @@
+manifest.txt — Release 1.0.3 (GitHub-Ready)
+
+.nojekyll | 1 bytes | sha256:01ba4719c80b
+CNAME | 30 bytes | sha256:99ce17d512d0
+LICENSE.txt | 69 bytes | sha256:492f9bca4fb9
+README.txt | 116 bytes | sha256:708589a19a49
+alt_text.csv | 390 bytes | sha256:5339071eecd6
+post_deployment_checklist.md | 44 bytes | sha256:1a118e7ee1b1
+structure.json | 333 bytes | sha256:23722e8280b3
+tier_rules.csv | 112 bytes | sha256:6c803cfafc99
+validation_note.txt | 100 bytes | sha256:e9806a061287
+docs/index.html | 809 bytes | sha256:1a53bc758c49
+docs/assets/LearnWithoutLimits_Badge.jpg | 447365 bytes | sha256:c7ce768dcb94
+docs/assets/LearnWithoutLimits_Badge.png | 1926737 bytes | sha256:8efe71c89640
+docs/assets/LearnWithoutLimits_Main.jpg | 461637 bytes | sha256:7d4b88195408
+docs/assets/LearnWithoutLimits_Main.png | 2447046 bytes | sha256:4c8c6ee79d1f
+docs/css/style.css | 458 bytes | sha256:7d9a87303e40
+docs/js/app.js | 53 bytes | sha256:20e31838bb2b
+docs/en/index.html | 978 bytes | sha256:1d14e611726d
+docs/cy/index.html | 829 bytes | sha256:d90c0fe32930
+docs/printable_templates/Cross_Border_Transition_Checklist.docx | 2063 bytes | sha256:4951c66b1e81
+docs/printable_templates/Deregistration_Under_Pressure_Letter.docx | 2039 bytes | sha256:85afa8355da6
+docs/printable_templates/EOTAS_Education_Entitlement_Guide.docx | 2021 bytes | sha256:4d1b36aaa2c2
+docs/printable_templates/EOTAS_Rejection_Next_Steps_Letter.docx | 2043 bytes | sha256:6d754281795a
+docs/printable_templates/IDP_Continuation_Post16_Guide.docx | 2030 bytes | sha256:5cada241400b
+docs/printable_templates/IDP_Correction_Request_Letter.docx | 2028 bytes | sha256:10a4341c9fcb
+docs/printable_templates/IDP_Overdue_Review_Request_Letter.docx | 2038 bytes | sha256:fb2d5c09d234
+docs/printable_templates/Patient_Adjustment_Sheet_Adult.docx | 2028 bytes | sha256:f46a618fde3b
+docs/printable_templates/Patient_Adjustment_Sheet_Child.docx | 2035 bytes | sha256:a804a40c9e8a
+docs/printable_templates/index.html | 1354 bytes | sha256:896e3029d29d
+docs/content/chatbot_logic.md | 80 bytes | sha256:3bb812a41a70
+docs/content/knowledge_base.md | 92 bytes | sha256:c7f20eef69cd
+.github/workflows/link-check.yml | 384 bytes | sha256:d212d68770ba
+guides/BN-002_GitHub_Deployment_and_Domain_Setup_Guide.md | 114 bytes | sha256:2d8b128776ba
+quickstart/QuickStart_Script.txt | 18 bytes | sha256:2c842e944f44
+quickstart/QuickStart_Storyboard.md | 47 bytes | sha256:0f2e4ef78b7c
+quickstart/QuickStart_Subtitles_SRT_Template.srt | 103 bytes | sha256:d97d855da1dd
