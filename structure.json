@@ -1,3 +1,21 @@
 {
-  "placeholder": "App structure goes here"
+  "version": "1.0.3",
+  "pages": [
+    {
+      "path": "/docs/index.html",
+      "lang": "root"
+    },
+    {
+      "path": "/docs/en/index.html",
+      "lang": "en"
+    },
+    {
+      "path": "/docs/cy/index.html",
+      "lang": "cy"
+    },
+    {
+      "path": "/docs/printable_templates/index.html",
+      "lang": "en"
+    }
+  ]
 }
