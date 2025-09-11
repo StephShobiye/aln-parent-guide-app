@@ -1,3 +1,33 @@
+# Release 1.0 Manifest – ALN Parent Guide App
+
+## Root level
+- LICENSE.txt
+- README.md
+- README.txt
+- manifest.txt
+- validation_note.txt
+- structure.json
+
+## Content/
+- content/alt_text.csv
+- content/chatbot_logic.md
+- content/knowledge_base.md
+
+### Content subfolders
+- content/assets/        [currently .gitkeep]
+- content/docs/          [currently .gitkeep]
+- content/printables/    [currently .gitkeep]
+
+---
+# Technical checksum manifest (auto-generated style)
+
+
+
+
+
+
+
+
 manifest.txt — Release 1.0.3 (GitHub-Ready)
 
 .nojekyll | 1 bytes | sha256:01ba4719c80b
