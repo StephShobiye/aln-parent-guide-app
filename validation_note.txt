@@ -1,2 +1,5 @@
-Validation Note — Release 1.0.3 (GitHub-Ready)
-Scope: Pages /docs + www.learnwithoutlimitscic.org
+Validation Note – Release 4.0.0
+
+Date: 1 November 2025
+
+This release was tested locally to ensure that all files loaded without errors.  The web app runs entirely in the browser and does not require a server.  The FAQ search, accordion toggling and rule‑based chatbot were tested on desktop and mobile screen sizes.  All printable templates open in a new tab and can be printed from the browser.  SHA‑256 hashes for all files are recorded in manifest.txt and checksum_sha256.txt.  No empty files were included.

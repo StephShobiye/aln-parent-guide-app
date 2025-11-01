@@ -1,37 +1,35 @@
-manifest.txt — Release 1.0.3 (GitHub-Ready)
-
-.nojekyll | 1 bytes | sha256:01ba4719c80b
-CNAME | 30 bytes | sha256:99ce17d512d0
-LICENSE.txt | 69 bytes | sha256:492f9bca4fb9
-README.txt | 116 bytes | sha256:708589a19a49
-alt_text.csv | 390 bytes | sha256:5339071eecd6
-post_deployment_checklist.md | 44 bytes | sha256:1a118e7ee1b1
-structure.json | 333 bytes | sha256:23722e8280b3
-tier_rules.csv | 112 bytes | sha256:6c803cfafc99
-validation_note.txt | 100 bytes | sha256:e9806a061287
-docs/index.html | 809 bytes | sha256:1a53bc758c49
-docs/assets/LearnWithoutLimits_Badge.jpg | 447365 bytes | sha256:c7ce768dcb94
-docs/assets/LearnWithoutLimits_Badge.png | 1926737 bytes | sha256:8efe71c89640
-docs/assets/LearnWithoutLimits_Main.jpg | 461637 bytes | sha256:7d4b88195408
-docs/assets/LearnWithoutLimits_Main.png | 2447046 bytes | sha256:4c8c6ee79d1f
-docs/css/style.css | 458 bytes | sha256:7d9a87303e40
-docs/js/app.js | 53 bytes | sha256:20e31838bb2b
-docs/en/index.html | 978 bytes | sha256:1d14e611726d
-docs/cy/index.html | 829 bytes | sha256:d90c0fe32930
-docs/printable_templates/Cross_Border_Transition_Checklist.docx | 2063 bytes | sha256:4951c66b1e81
-docs/printable_templates/Deregistration_Under_Pressure_Letter.docx | 2039 bytes | sha256:85afa8355da6
-docs/printable_templates/EOTAS_Education_Entitlement_Guide.docx | 2021 bytes | sha256:4d1b36aaa2c2
-docs/printable_templates/EOTAS_Rejection_Next_Steps_Letter.docx | 2043 bytes | sha256:6d754281795a
-docs/printable_templates/IDP_Continuation_Post16_Guide.docx | 2030 bytes | sha256:5cada241400b
-docs/printable_templates/IDP_Correction_Request_Letter.docx | 2028 bytes | sha256:10a4341c9fcb
-docs/printable_templates/IDP_Overdue_Review_Request_Letter.docx | 2038 bytes | sha256:fb2d5c09d234
-docs/printable_templates/Patient_Adjustment_Sheet_Adult.docx | 2028 bytes | sha256:f46a618fde3b
-docs/printable_templates/Patient_Adjustment_Sheet_Child.docx | 2035 bytes | sha256:a804a40c9e8a
-docs/printable_templates/index.html | 1354 bytes | sha256:896e3029d29d
-docs/content/chatbot_logic.md | 80 bytes | sha256:3bb812a41a70
-docs/content/knowledge_base.md | 92 bytes | sha256:c7f20eef69cd
-.github/workflows/link-check.yml | 384 bytes | sha256:d212d68770ba
-guides/BN-002_GitHub_Deployment_and_Domain_Setup_Guide.md | 114 bytes | sha256:2d8b128776ba
-quickstart/QuickStart_Script.txt | 18 bytes | sha256:2c842e944f44
-quickstart/QuickStart_Storyboard.md | 47 bytes | sha256:0f2e4ef78b7c
-quickstart/QuickStart_Subtitles_SRT_Template.srt | 103 bytes | sha256:d97d855da1dd
+0d300b01d8abd0a720fb241f91e3f3ea69d981ecc267428b148b3a7a1611e776  printables/Post_16_Transition_Guide.html
+0df5b0f2f399fa41dc23d36d80543585f30b9d0110458a03762b77ff42476ff0  content/tier_rules.csv
+0e506a6818a15918c56a58e17f9072853d0ff97d8580d2e8f7b006585f199731  app/app.en.html
+27ad2a8cf554a84139421e5c08b8b8a15f4bce92fe25a583f61d07ed124797bc  printables/Tribunal_Appeal_Letter.html
+2a654dbaaaeb79c36ba7f45400cef373ddec3c656dcf863af5cf02907871d830  app/resources.json
+2d885c95649ecb52a7393a0068dbd1b0031ae15caf7b4b12f80ff7ef7c836270  printables/Advocacy_Letter.html
+2f02bf958daed1ee1bedf7a3a82807a5e3920f7574ea8dddc0089eb4b73c0f3f  downloads/parent_pack_v4.0.0.zip
+32961a0fbf00e449ac9f35fa97c19789c993d544abbf70901108970e349a3827  printables/IDP_Review_Request_Letter.html
+4d6c69e36fcb771d68924ee04c2aa5735bb872eed3488352a106c8d2a0a5b19c  app/latest-resources.js
+510f97ac6c76a59b87993bb720d5c9179f9d1c5eb052335d97258025d5608878  printables/Request_IDP_Assessment_Letter.html
+5c4ac51691dca9a60a3747d7ddb809795805e8ceb1ad93bc35402209b6c3ac10  printables/Validation_Checklist.html
+5d3c8ac20933600376e17bed9664d52ac13149937e20150efee417629819ee06  alt_text.csv
+5f66b5ee1bd09dab9ce4f14bbb16d09d120e375f2ce1d37fc5a5d0e6f050706e  printables/EOTAS_Rejection_Checklist.html
+65bc9fc6fbc3c59158e2e3c8c1339f0e80d6cd378824e94eef6fd10e47dc9929  content/structure.json
+660dcdb3c702d8d891ced35bd908609e49e05609aa5be2a392d7f92f3b90a43f  compliance/safeguarding_policy.md
+67d954eb069ab5e04dd26f9003d6eab33016e8383f5094c0eeac2ce10c16ae8f  printables/Digital_Pathways_Planner.html
+729a145bab35cc50afc4c0c262abc90fe2c6032471886f419fbe8e70c30973b3  website_hooks/link_targets.json
+74e4220135f1c1ca3624c8d2d50809bc1037a1eceadceaa9e6823d6a4641693e  content/downloads.json
+7bd0db04f8b3bcd776531a438d701f441894a75035285ec66df3bb60b71c0100  content/ai_prompt_library.csv
+8fce9925864a254d09d915795beb10076a1b4696e022d07eb1fa198ed2fb2275  printables/Provision_Not_Delivered.html
+9044a72a543ea1c6517b06777b77ad4efcbf86170c1ce43b5e14dcec61966016  app/chatbot.js
+9a5cfc1ec9dc42c5579f3c95af3c1adc13df501dbd183193da8ff98596b09a69  printables/Cross_Border_Toolkit.html
+9a95cf2d3aaafd85e3641e21930b6d9cd2d82d53990290121fb3d43f4985c8bc  LICENSE.txt
+a73470128a29dd3324964431937a97d5c0baad2341c01bac08bb8c7be110f6f1  printables/Complaint_Letter.html
+a99ed892f9c52039fc37f1bbdcda52f0c20421087dc2f045fb1e3a818ee9922c  printables/Patient_Adjustment_Sheet_Child.html
+b30341fdcc7f49a07619ec270e9d227f970e3a49fe226836071cf8b8eb6c45a2  compliance/privacy_policy.md
+b4314e16a0e8b682308a5dadc132941d0efdc0df3632235eb7266fb1b3ce777a  printables/EOTAS_Entitlement_Guide.html
+bdb13b0a1022c5e43cc6eeebc2efbab9d2f88e5de6b631226942769c3b8fb2cb  printables/EOTAS_Rejection_Letter.html
+bf6604bdd8c1d62114e91cadc5e108d700532a03efdc26e89a50d2eb98876ca6  printables/EOTAS_Information_Request.html
+c7bdc8730f88ca7425db004641ffcb57847419f7b786a9a3d1cf2668e0c38b61  content/knowledge_base.md
+cd88f1341050b0eb1fdc13b69da31728503fd118eaca9f4f9291b8c1e4cf1d05  printables/Year_7_Transition_Tips.html
+d36b06b1924ffb70afe1d6bb11ecf5f553d0a034770d5b3e398ee700e9abba79  downloads/release_notes_v4.0.0.md
+e963b8a538a344d25914398f587d1c2c363be00718d603cf4d07aaa797df633d  compliance/privacy_and_safeguarding.md
+ed9646257b6135941dec1e6af075f1ba361b7bb85f6d665bb75819734b2c7ef2  content/chatbot_logic.md
+f3ef6da001e1383f82bd273c95ad5617c8e45287c5e7c8225f826464b894a8c5  printables/Patient_Adjustment_Sheet_Adult.html

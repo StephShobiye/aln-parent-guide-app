@@ -1,2 +1,7 @@
-Copyright (c) 2025 Learning Without Limits CIC.
-All rights reserved.
+Copyright (c) 2025 Golau Insight Ltd. All rights reserved.
+
+This release of the ALN Parent Guide is provided for educational and
+informational purposes only.  No part of this package may be
+reproduced, distributed or transmitted in any form or by any means
+without the prior written permission of Golau Insight Ltd, except as
+permitted by law.
