@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALN Parent Guide – Release 4.0.0</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Arial, sans-serif;
+      background-color: #f6f6f6;
+      color: #333;
+    }
+    header {
+      background-color: #004a80;
+      color: #ffffff;
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    header span {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    #app-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    #searchInput {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    details {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0.5rem 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+    details summary {
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+    }
+    details[open] summary {
+      color: #004a80;
+    }
+    .answer {
+      margin-top: 0.5rem;
+    }
+    .answer ul {
+      margin: 0.5rem 0 0.5rem 1.25rem;
+    }
+    #chatbot {
+      margin-top: 2rem;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0.75rem;
+    }
+    #chatbot h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+    #chatbot-output {
+      max-height: 200px;
+      overflow-y: auto;
+      margin-bottom: 0.5rem;
+      padding-right: 0.25rem;
+    }
+    #chatbot-input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .chat-message {
+      margin-bottom: 0.4rem;
+    }
+    .chat-message strong {
+      color: #004a80;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ALN Parent Guide</h1>
+    <span>Release 4.0.0</span>
+  </header>
+  <div id="app-container">
+    <label for="searchInput" style="display:none">Search questions or topics</label>
+    <input type="text" id="searchInput" placeholder="Search questions or topics…" aria-label="Search questions or topics" />
+    <div id="accordion"></div>
+    <div id="chatbot">
+      <h2>Ask the Parent Guide</h2>
+      <div id="chatbot-output" aria-live="polite"></div>
+      <label for="chatbot-input" style="display:none">Chatbot input</label>
+      <input type="text" id="chatbot-input" placeholder="Type your question and press Enter…" aria-label="Chatbot input" />
+    </div>
+  </div>
+  <script src="latest-resources.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>
