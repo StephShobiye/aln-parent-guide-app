@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="0; url=/aln-parent-guide-app/app/app.en.html">
+  <title>Parent Guide App</title>
+  <link rel="canonical" href="/aln-parent-guide-app/app/app.en.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <p>Redirecting to the app… If nothing happens, <a href="/aln-parent-guide-app/app/app.en.html">tap here</a>.</p>
+  <script>
+    location.replace('/aln-parent-guide-app/app/app.en.html');
+  </script>
+</body>
+</html>
