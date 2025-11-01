@@ -1,125 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ALN Parent Guide App</title>
-
-  <!-- PWA manifest -->
-  <link rel="manifest" href="manifest.webmanifest">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALN Parent Guide – Release 4.0.0</title>
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; padding:0 1rem 3rem;}
-    header{position:sticky; top:0; background:#fff; padding:1rem 0; border-bottom:1px solid #eee;}
-    h1{margin:0 0 .25rem;}
-    .actions{display:flex; gap:.5rem; flex-wrap:wrap}
-    input[type="search"]{width:100%; max-width:520px; padding:.6rem .8rem; border:1px solid #ccc; border-radius:.5rem}
-    .btn{display:inline-block; padding:.6rem .9rem; border-radius:.5rem; border:1px solid #222; text-decoration:none; color:#222}
-    .badge{background:#eef; padding:.1rem .4rem; border-radius:.4rem; font-size:.8rem; margin-left:.4rem}
-    #content{max-width:900px; margin:1rem auto 0; line-height:1.55}
-    #results > details{border:1px solid #eee; border-radius:.6rem; padding:.6rem .8rem; margin:.6rem 0}
-    #results summary{font-weight:600; cursor:pointer}
-    .note{font-size:.9rem; color:#666}
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Arial, sans-serif;
+      background-color: #f6f6f6;
+      color: #333;
+    }
+    header {
+      background-color: #004a80;
+      color: #ffffff;
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    header span {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    #app-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    #searchInput {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    details {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0.5rem 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+    details summary {
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+    }
+    details[open] summary {
+      color: #004a80;
+    }
+    .answer {
+      margin-top: 0.5rem;
+    }
+    .answer ul {
+      margin: 0.5rem 0 0.5rem 1.25rem;
+    }
+    #chatbot {
+      margin-top: 2rem;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0.75rem;
+    }
+    #chatbot h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+    #chatbot-output {
+      max-height: 200px;
+      overflow-y: auto;
+      margin-bottom: 0.5rem;
+      padding-right: 0.25rem;
+    }
+    #chatbot-input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .chat-message {
+      margin-bottom: 0.4rem;
+    }
+    .chat-message strong {
+      color: #004a80;
+    }
   </style>
 </head>
 <body>
-<header>
-  <h1>ALN Parent Guide <span class="badge">Release 1.0.3</span></h1>
-  <div class="actions">
-    <input id="q" type="search" placeholder="Search questions or topics…" />
-    <a class="btn" id="downloadBtn" href="/downloads/aln-parent-guide-app-parent-pack-v1.0.3.zip">Download Parent Pack</a>
+  <header>
+    <h1>ALN Parent Guide</h1>
+    <span>Release 4.0.0</span>
+  </header>
+  <div id="app-container">
+    <label for="searchInput" style="display:none">Search questions or topics</label>
+    <input type="text" id="searchInput" placeholder="Search questions or topics…" aria-label="Search questions or topics" />
+    <div id="accordion"></div>
+    <div id="chatbot">
+      <h2>Ask the Parent Guide</h2>
+      <div id="chatbot-output" aria-live="polite"></div>
+      <label for="chatbot-input" style="display:none">Chatbot input</label>
+      <input type="text" id="chatbot-input" placeholder="Type your question and press Enter…" aria-label="Chatbot input" />
+    </div>
   </div>
-  <div class="note">Tip: use “Add to Home Screen” to install this as an app.</div>
-</header>
-
-<main id="content">
-  <div id="results">Loading…</div>
-</main>
-
-<script>
-// --- Minimal FAQ loader ---
-// We’ll pull your Markdown knowledge base and split by headings (## Question)
-const KB_URL = "../content/knowledge_base.md";
-const CHATBOT_URL = "../content/chatbot_logic.md";
-const qEl = document.getElementById('q');
-const resultsEl = document.getElementById('results');
-
-function mdToText(md){
-  // very light markdown strip for summaries
-  return md.replace(/[#*_>`]/g,'').replace(/\[(.*?)\]\((.*?)\)/g,'$1');
-}
-
-function render(items, filter=""){
-  resultsEl.innerHTML = "";
-  const term = filter.trim().toLowerCase();
-  const matched = items.filter(it =>
-    !term ||
-    it.q.toLowerCase().includes(term) ||
-    it.a.toLowerCase().includes(term)
-  );
-  if (!matched.length){
-    resultsEl.textContent = term ? "No results." : "No content found.";
-    return;
-  }
-  matched.forEach(it=>{
-    const det = document.createElement('details');
-    const sum = document.createElement('summary');
-    sum.textContent = it.q;
-    const body = document.createElement('div');
-    body.innerHTML = it.html; // already basic HTML
-    det.appendChild(sum);
-    det.appendChild(body);
-    resultsEl.appendChild(det);
-  });
-}
-
-async function loadKB(){
-  try{
-    const res = await fetch(KB_URL);
-    const md = await res.text();
-
-    // Split by level-2 headings "##"
-    const chunks = md.split(/\n##\s+/).filter(Boolean);
-    const items = chunks.map((chunk, idx)=>{
-      // first line is the question (if first chunk starts with "##", handle both)
-      let [first, ...rest] = chunk.split('\n');
-      let question = first.replace(/^#+\s*/, '').trim();
-      let answerMd = rest.join('\n').trim();
-      // quick markdown → html (minimal)
-      let html = answerMd
-        .replace(/^###\s+(.*)$/gm,'<h3>$1</h3>')
-        .replace(/^\-\s+(.*)$/gm,'<li>$1</li>')
-        .replace(/\n\n/g,'<br><br>')
-        .replace(/\[(.*?)\]\((.*?)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
-      html = html.replace(/(<li>.*<\/li>)/s,'<ul>$1</ul>');
-      return { q: mdToText(question), a: mdToText(answerMd), html };
-    });
-
-    render(items);
-
-    qEl.addEventListener('input', () => render(items, qEl.value));
-
-    // Optionally append chatbot logic below
-    try{
-      const botRes = await fetch(CHATBOT_URL);
-      if (botRes.ok){
-        const botMd = await botRes.text();
-        const sec = document.createElement('section');
-        sec.innerHTML = `<h2>Chatbot Logic (Preview)</h2><pre style="white-space:pre-wrap;border:1px solid #eee;padding:8px;border-radius:8px;">${botMd.replace(/[<>&]/g, s=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[s]))}</pre>`;
-        resultsEl.appendChild(sec);
-      }
-    }catch(e){}
-  }catch(e){
-    resultsEl.textContent = "Couldn’t load the knowledge base.";
-  }
-}
-
-// Register service worker for offline/PWA
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js').catch(()=>{});
-}
-
-loadKB();
-</script>
+  <script src="latest-resources.js"></script>
+  <script src="chatbot.js"></script>
 </body>
 </html>
