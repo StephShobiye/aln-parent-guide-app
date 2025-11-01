@@ -1,21 +1,11 @@
 {
-  "version": "1.0.3",
-  "pages": [
-    {
-      "path": "/docs/index.html",
-      "lang": "root"
-    },
-    {
-      "path": "/docs/en/index.html",
-      "lang": "en"
-    },
-    {
-      "path": "/docs/cy/index.html",
-      "lang": "cy"
-    },
-    {
-      "path": "/docs/printable_templates/index.html",
-      "lang": "en"
-    }
+  "version": "4.0.0",
+  "categories": [
+    { "id": "idp", "title": "IDP Basics" },
+    { "id": "eotas", "title": "EOTAS & Home Education" },
+    { "id": "transition", "title": "Transitions & Post‑16" },
+    { "id": "complaints", "title": "Complaints & Appeals" },
+    { "id": "safety", "title": "Safety & Placement" },
+    { "id": "templates", "title": "Templates & Tools" }
   ]
 }
