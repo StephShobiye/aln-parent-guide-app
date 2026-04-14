@@ -1,7 +1,13 @@
-Copyright (c) 2025 Golau Insight Ltd. All rights reserved.
 
-This release of the ALN Parent Guide is provided for educational and
-informational purposes only.  No part of this package may be
-reproduced, distributed or transmitted in any form or by any means
-without the prior written permission of Golau Insight Ltd, except as
-permitted by law.
+Copyright (c) 2026 Golau Insight Ltd. All rights reserved.
+
+This repository and its contents are proprietary.
+
+No part of this codebase, content, or associated materials may be copied, modified, distributed, sublicensed, or used in any form without the prior written permission of Golau Insight Ltd, except as permitted by law.
+
+This repository is made available for transparency and collaboration purposes only. No licence is granted by default through access to this repository.
+
+Learn Without Limits CIC is authorised to use this codebase under a separate licence agreement for the purposes of delivering public benefit services.
+
+For permissions, contact:
+steph.shobiye@learnwithoutlimitscic.org
